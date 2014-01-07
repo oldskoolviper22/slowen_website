@@ -1,3 +1,15 @@
 <% provide(:title, 'About') %>
-<h1>About</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<% content_for :head do %>
+	<h1>About</h1>
+<% end %>
+
+<% content_for :left do %>
+	<p>Find me in app/views/static_pages/about.html.erb</p>
+
+	blah
+	blah 
+	blah
+
+	yay
+<% end %>
+

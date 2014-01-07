@@ -22,6 +22,16 @@
 	margin: 0;
 }
 
+html {
+	min-height:100%;
+}
+
+body {
+	min-height:100%;
+	background-color: #E9E9F2;
+	padding-bottom: 20px;
+}
+
 ul {
 	list-style-type:none;
 	margin:0;
@@ -38,55 +48,107 @@ div {
 }
 
 .columns {
+	position:absolute;
 	display: inline;
-	margin:0;
+	min-height:100%;
+	margin-bottom:20px;
 }
 
 #left {
-	float: left;
-	width: 25%;
-	height: 500px;
-	overflow: hidden;
+	left:0;
+	width: 30%;
 	margin-right: -2px;
 	border-right: 2px solid grey;
 	background-color: #D8D8D8;
 }
 
+#test {
+	position: absolute;
+	bottom: 0;
+	padding-bottom:25px;
+}
+
 #right {
+	right:0;
 	float: left;
-	width: 75%;
-	height: 500px;
-	overflow: hidden;
+	width: 70%;
 }
 
 #navigation {
-    background-color:black;
-    height:35px;
+    background-color: black;
+	height:35px;
     text-align:center;
     padding-top:15px;
+}
 
+#name {
+	color: #C0C0C0;
+	float: left;
+	padding-left:15px;
+	margin-top:-10px;
 }
 
 #navigation a {
 	font-family: "Alte Haas Grotesk";
 	font-weight: bold;
 	font-size:18px;
-    padding-left:15px;
-    padding-right:15px;
+    margin-left:50px;
+    margin-right:50px;
     color:#C0C0C0;
     text-decoration:none;
+}
+
+#navigation li {
+	display: inline-block;
+}
+
+#navigation li ul {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
 }
 
 #navigation a:hover {
 	font-family: "Alte Haas Grotesk";
 	font-weight: bold;
 	color:#D8D8D8;
+	border-bottom: 2px solid white;
+
+}
+
+#navigation li:hover ul {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+	background-color: black;
+	padding:10px;
+	position: absolute;
+	
+}
+
+#navigation li:hover ul li {
+	display: block;
+	float: none;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left:0;
+	padding-right:0;
+}
+
+#navigation li:hover ul a {
+	margin: 15px;
 }
 
 #navitems {
 	float:right;
+	display: inline;
 }
 
 #footer {
-	clear: both;
+	position: absolute;
+	width: 100%;
+	bottom:0;
+	height: 20px;
+	text-align: center;
+	border-top: 2px solid #C0C0C0;
 }

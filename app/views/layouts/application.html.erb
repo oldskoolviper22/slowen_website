@@ -10,24 +10,33 @@
   <![endif]-->
 </head>
 <body>
-  <div class="columns" id="left"></div>
+  <div class="columns" id="left">
+    <%= yield :left %>
+  </div>
   <div class="columns" id="right">
     <div id="navigation">
+      <div id="name">
+        <%= yield :head %>
+      </div>
       <ul id="navitems">    
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Projects",    projects_path %></li>
+        <li><%= link_to "Projects",    projects_path %>
+          <ul>
+            <li><%= link_to "Robotic Bartender", '#' %></li>
+            <li><%= link_to "Underactuated Hand", '#' %></li>
+            <li><%= link_to "Planet Labs", '#' %></li>
+            <li><%= link_to "Hijack Power", '#' %></li>
+            <li><%= link_to "Mechanical Gibbon", '#' %></li>
+            <li><%= link_to "Aerobatic Pilots", '#' %></li>
+            <li><%= link_to "Coffe Can Radar", '#' %></li>
+          </ul>
+        </li>
         <li><%= link_to "About", about_path %></li>
       </ul>
     </div>
-  </div>
-  <div id="footer"></div>
-
-
-
-
-  <div class="container">
-    <%= yield %>
-  </div>
-
+      <%= yield %>
+    </div>
+    <div id="test">Bottom of page?</div>
+  <div id="footer">This is my footer.</div>
 </body>
 </html>
