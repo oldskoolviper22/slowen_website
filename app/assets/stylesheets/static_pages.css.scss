@@ -1,0 +1,92 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  	font-family: 'Alte Haas Grotesk';
+  	src:url('AlteHaasGroteskRegular.ttf');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  	font-family: 'Alte Haas Grotesk';
+  	src:url('AlteHaasGroteskBold.ttf');
+
+	font-weight: bold;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+}
+
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+li {
+	float:left;
+}
+
+div {
+	margin: 0;
+}
+
+.columns {
+	display: inline;
+	margin:0;
+}
+
+#left {
+	float: left;
+	width: 25%;
+	height: 500px;
+	overflow: hidden;
+	margin-right: -2px;
+	border-right: 2px solid grey;
+	background-color: #D8D8D8;
+}
+
+#right {
+	float: left;
+	width: 75%;
+	height: 500px;
+	overflow: hidden;
+}
+
+#navigation {
+    background-color:black;
+    height:35px;
+    text-align:center;
+    padding-top:15px;
+
+}
+
+#navigation a {
+	font-family: "Alte Haas Grotesk";
+	font-weight: bold;
+	font-size:18px;
+    padding-left:15px;
+    padding-right:15px;
+    color:#C0C0C0;
+    text-decoration:none;
+}
+
+#navigation a:hover {
+	font-family: "Alte Haas Grotesk";
+	font-weight: bold;
+	color:#D8D8D8;
+}
+
+#navitems {
+	float:right;
+}
+
+#footer {
+	clear: both;
+}
