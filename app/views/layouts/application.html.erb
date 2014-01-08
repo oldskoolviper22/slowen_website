@@ -11,6 +11,7 @@
 </head>
 <body>
   <div class="columns" id="left">
+    <div id="logo"><%= image_tag("seanlowen_jfdi.png", alt: "Sean Lowen") %></div>
     <%= yield :left %>
   </div>
   <div class="columns" id="right">
@@ -22,13 +23,13 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Projects",    projects_path %>
           <ul>
-            <li><%= link_to "Robotic Bartender", '#' %></li>
-            <li><%= link_to "Underactuated Hand", '#' %></li>
-            <li><%= link_to "Planet Labs", '#' %></li>
-            <li><%= link_to "Hijack Power", '#' %></li>
-            <li><%= link_to "Mechanical Gibbon", '#' %></li>
-            <li><%= link_to "Aerobatic Pilots", '#' %></li>
-            <li><%= link_to "Coffe Can Radar", '#' %></li>
+            <li><%= link_to "Robotic Bartender", barbot_path %></li>
+            <li><%= link_to "Underactuated Hand", underactuation_path %></li>
+            <li><%= link_to "Planet Labs", planet_labs_path %></li>
+            <li><%= link_to "Hijack Power", hijack_path %></li>
+            <li><%= link_to "Mechanical Gibbon", gibbon_path %></li>
+            <li><%= link_to "Aerobatic Pilots", uocd_path %></li>
+            <li><%= link_to "Coffee Can Radar", radar_path %></li>
           </ul>
         </li>
         <li><%= link_to "About", about_path %></li>
