@@ -11,7 +11,10 @@
 </head>
 <body>
   <div class="columns" id="left">
-    <div id="logo"><%= image_tag("seanlowen_jfdi.png", alt: "Sean Lowen") %></div>
+    <div id="logo">
+      <%= link_to image_tag("seanlowen1.png", :alt=>"Sean Lowen", :id=>"name"), about_me_path %>
+      <%= link_to image_tag("jfdi.png", alt: "JFDI", id: "jfdi"), philosophies_path %>
+    </div>
     <%= yield :left %>
   </div>
   <div class="columns" id="right">

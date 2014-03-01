@@ -161,8 +161,35 @@ div {
 	background-color: #A0A0A0;
 	margin-right:-2px;
 	text-align: center;
+
 }
 
 #logo img {
-	width: 80%;
+	display:inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+	height:100px;
+}
+
+#jfdi:hover {
+	background-color:#E9E9F2;
+}
+
+.left_title {
+	text-align:center;
+}
+
+.left_text {
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:10px;
+	text-align:center;
+}
+
+.left_text p {
+	margin-top: 20px;
+}
+
+#nomarg {
+	margin-top: 2px;
 }

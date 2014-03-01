@@ -9,4 +9,6 @@ Website::Application.routes.draw do
   match '/projects/gibbon',  		to: 'projects#gibbon',  		as: 'gibbon',			via: 'get'
   match '/projects/uocd',  			to: 'projects#uocd',  			as: 'uocd',				via: 'get'
   match '/projects/radar',  		to: 'projects#radar',  			as: 'radar',			via: 'get'
+  match '/about/about_me',          to: 'about#about_me',           as: 'about_me',     via: 'get'
+  match '/about/philosophies',      to: 'about#philosophies',       as: 'philosophies', via: 'get'
 end
