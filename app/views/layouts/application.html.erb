@@ -10,37 +10,44 @@
   <![endif]-->
 </head>
 <body>
-  <div class="columns" id="left">
-    <div id="logo">
-      <%= link_to image_tag("my_name.png", :alt=>"Sean Lowen", :id=>"name"), about_me_path %>
-      <%= link_to image_tag("whatido.png", alt: "JFDI", id: "jfdi"), philosophies_path %>
-    </div>
-    <%= yield :left %>
-  </div>
-  <div class="columns" id="right">
-    <div id="navigation">
-      <div id="pagename">
-        <%= yield :head %>
+  <div class="colmask">
+    <div id="columns">
+      <div id="left">
+        <div id="info">
+          <%= link_to image_tag("my_name.png", :alt=>"Sean Lowen", :id=>"name", :class=> "infoimg"), about_me_path %>
+          <%= link_to image_tag("whatido.png", alt: "Robotics, Mechatronics, Entrepreneurship", id: "slogan", :class=> "infoimg"), philosophies_path %>
+        </div>
+        <div id="left-text">
+        </div>
       </div>
-      <ul id="navitems">    
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Projects",    projects_path %>
-          <ul>
-            <li><%= link_to "Robotic Bartender", barbot_path %></li>
-            <li><%= link_to "Underactuated Hand", underactuation_path %></li>
-            <li><%= link_to "Planet Labs", planet_labs_path %></li>
-            <li><%= link_to "Hijack Power", hijack_path %></li>
-            <li><%= link_to "Mechanical Gibbon", gibbon_path %></li>
-            <li><%= link_to "Aerobatic Pilots", uocd_path %></li>
-            <li><%= link_to "Coffee Can Radar", radar_path %></li>
-          </ul>
-        </li>
-        <li><%= link_to "About", about_me_path %></li>
-      </ul>
+      <div id="right">
+        <div id="menu">
+          <div id="pagetitle">
+            <%= yield :head %>
+          </div>
+          <div id="navigation">
+            <ul id="navitems">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Projects",    projects_path %>
+                <ul>
+                  <li><%= link_to "Robotic Bartender", barbot_path %></li>
+                  <li><%= link_to "Underactuated Hand", underactuation_path %></li>
+                  <li><%= link_to "Planet Labs", planet_labs_path %></li>
+                  <li><%= link_to "Hijack Power", hijack_path %></li>
+                  <li><%= link_to "Mechanical Gibbon", gibbon_path %></li>
+                  <li><%= link_to "Aerobatic Pilots", uocd_path %></li>
+                  <li><%= link_to "Coffee Can Radar", radar_path %></li>
+                </ul>
+              </li>
+              <li><%= link_to "About", about_me_path %></li>
+            </ul>
+          </div>
+        </div>
+        <div id="main-content">
+          <%= yield %>
+        </div>
+      </div>
     </div>
-      <%= yield %>
-    </div>
-    <div id="test">Bottom of page?</div>
-  <div id="footer">This is my footer.</div>
+  </div>
 </body>
 </html>
